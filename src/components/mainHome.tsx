@@ -5,6 +5,7 @@ import { HeaderPage } from "./headerPage";
 import { TabPc } from "./tablePc/tabPc";
 import { carregarDados } from "@/api/axios";
 import { Dados } from "@/types/typeDados";
+import { TabMobile } from "./tableMobile/tabMobile";
 
 export const MainHome = () => {
 
@@ -13,7 +14,7 @@ export const MainHome = () => {
     useEffect(() => {
         const fazerReq = async () => {
             const dados = await carregarDados();
-            if(dados) {
+            if (dados) {
                 setDados(dados);
             }
         }
@@ -24,7 +25,12 @@ export const MainHome = () => {
     return (
         <main className="pb-20">
             <HeaderPage />
-            <TabPc dados={getDados}/>
+            <div className="hidden md:flex">
+                <TabPc dados={getDados} />
+            </div>
+            <div className="md:hidden">
+                <TabMobile dados={getDados}/>
+            </div>
         </main>
     );
 }

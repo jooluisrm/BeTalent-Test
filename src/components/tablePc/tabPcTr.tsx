@@ -11,7 +11,7 @@ export const TabPcTr = ({ item }: Props) => {
     const phoneFormatado = formatPhoneNumber(item.phone);
 
     return (
-        <tr className="bg-white text-center text-[16px]">
+        <tr className="bg-white text-center text-[16px] border-b border-t-white">
             <td className="px-5 py-3 flex justify-center items-center">
                 <img
                     className="w-[34px] rounded-full"

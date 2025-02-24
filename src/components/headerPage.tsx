@@ -3,9 +3,9 @@ import { Search } from "lucide-react";
 
 export const HeaderPage = () => {
     return (
-        <div className="flex flex-col gap-5 lg:flex-row lg:justify-between py-10">
+        <div className="flex flex-col gap-5 md:flex-row md:justify-between py-10">
             <h1 className="text-[20px] font-bold">Funcionários</h1>
-            <div className="relative flex items-center w-full lg:w-[287px]">
+            <div className="relative flex items-center w-full md:w-[287px]">
                 <input
                     type="search"
                     placeholder="Pesquisar"
