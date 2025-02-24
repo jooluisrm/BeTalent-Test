@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { HeaderPage } from "./headerPage";
-import { TabPc } from "./table/tabPc";
+import { TabPc } from "./tablePc/tabPc";
 import { carregarDados } from "@/api/axios";
 import { Dados } from "@/types/typeDados";
 
