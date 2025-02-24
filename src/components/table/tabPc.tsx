@@ -9,6 +9,5 @@ export const TabPc = () => {
                 <TabPcTr />
             </tbody>
         </table>
-
     );
 }
