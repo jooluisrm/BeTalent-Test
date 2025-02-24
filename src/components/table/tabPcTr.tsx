@@ -1,10 +1,15 @@
 import { Dados } from "@/types/typeDados";
+import { formatDate } from "@/utils/formatarData";
+import { formatPhoneNumber } from "@/utils/formatarPhone";
 
 type Props = {
     item: Dados;
 }
 
 export const TabPcTr = ({ item }: Props) => {
+    const dataFormatada = formatDate(item.admission_date);
+    const phoneFormatado = formatPhoneNumber(item.phone);
+
     return (
         <tr className="bg-white text-center text-[16px]">
             <td className="px-5 py-3 flex justify-center items-center">
@@ -16,8 +21,8 @@ export const TabPcTr = ({ item }: Props) => {
             </td>
             <td className="px-4 py-2">{item.name}</td>
             <td className="px-4 py-2">{item.job}</td>
-            <td className="px-4 py-2">{item.admission_date}</td>
-            <td className="px-4 py-2">{item.phone}</td>
+            <td className="px-4 py-2">{dataFormatada}</td>
+            <td className="px-4 py-2">{phoneFormatado}</td>
         </tr>
     );
 }
