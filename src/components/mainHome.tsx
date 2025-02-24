@@ -22,9 +22,9 @@ export const MainHome = () => {
     }, []);
 
     return (
-        <main>
+        <main className="pb-20">
             <HeaderPage />
-            <TabPc />
+            <TabPc dados={getDados}/>
         </main>
     );
 }
