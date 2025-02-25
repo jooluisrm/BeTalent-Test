@@ -31,13 +31,20 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} __variable_4d318d __variable_ea5f4b antialiased vsc-initialized`}
         cz-shortcut-listen="true"
       >
-        <header className="bg-white min-h-[60px] flex items-center mx-5 lg:container lg:mx-auto">
-          <Link href={"/"}>
-            <h1>
-              <Image alt="logo" src={logoImg} width={71} />
-            </h1>
-          </Link>
+        <header className="bg-white min-h-[60px] w-full flex items-center relative">
+          <div className="absolute inset-x-0 bottom-0 h-[4px] bg-transparent shadow-[0_4px_4px_rgba(0,0,0,0.2)] w-full"></div>
+          <div className="lg:container lg:mx-auto w-full flex justify-between items-center">
+            <Link href={"/"}>
+              <h1 className="px-5 lg:px-0">
+                <Image alt="logo" src={logoImg} width={71} />
+              </h1>
+            </Link>
+          </div>
         </header>
+
+
+
+
         <main className="bg-[#F0F0F0] min-h-[calc(100vh-60px)]">
           {children}
         </main>
