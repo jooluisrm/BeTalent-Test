@@ -10,6 +10,8 @@ import { TabMobile } from "./tableMobile/tabMobile";
 export const MainHome = () => {
 
     const [getDados, setDados] = useState<Dados[] | null>(null);
+    
+    const [inputFilter, setInputFilter] = useState("");
 
     useEffect(() => {
         const fazerReq = async () => {
@@ -24,7 +26,7 @@ export const MainHome = () => {
 
     return (
         <main className="pb-20">
-            <HeaderPage />
+            <HeaderPage inputFilter={inputFilter} setInputFilter={setInputFilter}/>
             <div className="hidden md:flex">
                 <TabPc dados={getDados} />
             </div>
