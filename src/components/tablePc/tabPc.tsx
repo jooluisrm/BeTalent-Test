@@ -4,16 +4,22 @@ import { TabPcTr } from "./tabPcTr";
 
 type Props = {
     dados: Dados[] | null;
+    dadosFiltrados: Dados[] | null;
 }
 
-export const TabPc = ({ dados }: Props) => {
+export const TabPc = ({ dados, dadosFiltrados }: Props) => {
     return (
         <table className="min-w-full">
             <TabPcThead />
             <tbody>
-                {dados && dados.map((item) => (
-                    <TabPcTr item={item} key={item.id}/>
+                {dados && !dadosFiltrados && dados.map((item) => (
+                    <TabPcTr item={item} key={item.id} />
                 ))}
+                {
+                    dadosFiltrados && dadosFiltrados.map((item) => (
+                        <TabPcTr item={item} key={item.id} />
+                    ))
+                }
             </tbody>
         </table>
     );
