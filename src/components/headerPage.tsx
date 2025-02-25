@@ -13,7 +13,8 @@ export const HeaderPage = ({inputFilter, setInputFilter}: Props) => {
                 <input
                     type="search"
                     placeholder="Pesquisar"
-                    className="border rounded-lg py-3 pl-4 pr-10 w-full h-[48px]"
+                    autoFocus
+                    className="border rounded-lg py-3 pl-4 pr-10 w-full h-[48px] outline-none focus:border-[#0500FF]"
                     value={inputFilter}
                     onChange={(e) => setInputFilter(e.target.value)}
                 />

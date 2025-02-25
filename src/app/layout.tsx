@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import logoImg from "../../public/BeTalent.png";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,9 +32,11 @@ export default function RootLayout({
         cz-shortcut-listen="true"
       >
         <header className="bg-white min-h-[60px] flex items-center mx-5 lg:container lg:mx-auto">
-          <h1>
-            <Image alt="logo" src={logoImg} width={71} />
-          </h1>
+          <Link href={"/"}>
+            <h1>
+              <Image alt="logo" src={logoImg} width={71} />
+            </h1>
+          </Link>
         </header>
         <main className="bg-[#F0F0F0] min-h-[calc(100vh-60px)]">
           {children}
