@@ -8,7 +8,7 @@ type Props = {
 
 export const TabMobile = ({dados}: Props) => {
     return (
-        <table className="min-w-full">
+        <table className="min-w-full select-none">
             <TabMobileThead />
             <tbody>
                 {dados && dados.map((item) => (
