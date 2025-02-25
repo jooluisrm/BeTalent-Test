@@ -20,6 +20,13 @@ export const TabPc = ({ dados, dadosFiltrados }: Props) => {
                         <TabPcTr item={item} key={item.id} />
                     ))
                 }
+                {
+                    dadosFiltrados && dadosFiltrados.length === 0 && (
+                        <tr>
+                            <th className="w-[150px]">Não Encontrado!</th>
+                        </tr>
+                    )
+                }
             </tbody>
         </table>
     );

@@ -15,16 +15,19 @@ export const MainHome = () => {
     const [getDadosFilter, setDadosFilter] = useState<Dados[] | null>(null);
 
     useEffect(() => {
+        const removerAcentos = (str: string) => 
+            str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        
         const filtrarDados = () => {
-            if(getDados) {
-                const dadosFiltrados = getDados.filter((item) =>
-                    item.name.toLowerCase().includes(inputFilter.toLowerCase()) || 
-                    item.job.toLowerCase().includes(inputFilter.toLowerCase()) ||
+            if (getDados) {
+                const dadosFiltrados = getDados.filter((item) => 
+                    removerAcentos(item.name.toLowerCase()).includes(removerAcentos(inputFilter.toLowerCase())) || 
+                    removerAcentos(item.job.toLowerCase()).includes(removerAcentos(inputFilter.toLowerCase())) ||
                     item.phone.includes(inputFilter)
                 );
                 setDadosFilter(dadosFiltrados);
                 console.log(dadosFiltrados);
-            }  
+            }
         };
         filtrarDados();
     }, [inputFilter]);
@@ -47,7 +50,7 @@ export const MainHome = () => {
                 <TabPc dados={getDados} dadosFiltrados={getDadosFilter}/>
             </div>
             <div className="md:hidden">
-                <TabMobile dados={getDados} />
+                <TabMobile dados={getDados} dadosFiltrados={getDadosFilter}/>
             </div>
         </main>
     );
