@@ -59,7 +59,7 @@ Este projeto foi criado como parte de um teste técnico para um processo seletiv
   json-server --watch db.json
 ```
 1.3. **Abrir Navegador no endereço: http://localhost:3000**
-
+Verificar porta correta para abrir o projeto
 ---
 
 2. **Clonar esse Repositório:**
@@ -78,3 +78,9 @@ Este projeto foi criado como parte de um teste técnico para um processo seletiv
   yarn dev
   ```
 2.3. **Abrir Navegador no Endereço: http://localhost:3001**
+Verificar porta correta para abrir o projeto
+---
+
+*Autor:* João Luís Rodrigues de Moura
+*E-mail:* joaoluis4633@gmail.com
+*Linkedin:* https://www.linkedin.com/in/jo%C3%A3o-lu%C3%ADs-rodrigues-de-moura-47214a275/
