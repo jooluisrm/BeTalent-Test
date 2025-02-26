@@ -60,6 +60,8 @@ Este projeto foi criado como parte de um teste técnico para um processo seletiv
 ```
 1.3. **Abrir Navegador no endereço: http://localhost:3000**
 
+---
+
 2. **Clonar esse Repositório:**
    ```bash
    git clone https://github.com/jooluisrm/BeTalent-Test
