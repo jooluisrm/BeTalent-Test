@@ -70,6 +70,8 @@ Este projeto foi criado como parte de um teste técnico para um processo seletiv
 2.1. **Instalar Dependencias do Projeto**
   ```bash
   npm install
+  # or
+  yarn install
   ```
 2.2. **Executar Projeto NextJS**
  ```bash
